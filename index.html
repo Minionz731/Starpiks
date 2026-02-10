@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>STARPIKX — Photography & Visual Production</title>
   <meta name="description" content="Professional photography and visual production in Johannesburg, South Africa">
-  <link rel="stylesheet" href="assets/css//styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,9 +16,10 @@
   <nav class="main-nav">
     <div class="nav-logo">STARPIKX</div>
     <div class="nav-links">
-      <a href="#" data-page="home" class="nav-link active">Home</a>
-      <a href="#" data-page="archive" class="nav-link">Archive</a>
-      <a href="#" data-page="connect" class="nav-link">Connect</a>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
     <div class="nav-socials">
       <a href="https://www.instagram.com/starpikx?igsh=MTlidmhsODNmZXFyeg==" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
@@ -28,189 +29,193 @@
     </div>
   </nav>
 
-  <!-- Main Container -->
-  <div class="flipbook-container">
+  <!-- HOME SECTION - Slideshow Hero -->
+  <section id="home" class="slideshow-hero">
+    <div class="slideshow-wrapper">
+      <div class="slide active" style="background-image: url('assets/ps1.jpeg')"></div>
+      <div class="slide" style="background-image: url('assets/ps2.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/ps3.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/ps4.jpeg')"></div>
+      <div class="slide" style="background-image: url('assets/one.jpg')"></div>
+    </div>
     
-    <!-- HOME PAGE - Slideshow Hero -->
-    <section class="page active" id="page-home">
-      <div class="slideshow-hero">
-        <div class="slideshow-wrapper">
-          <div class="slide active" style="background-image: url('assets/ps1.jpeg')"></div>
-          <div class="slide" style="background-image: url('assets/ps4.jpeg')"></div>
-          <div class="slide" style="background-image: url('assets/ps3.jpg')"></div>
-          <div class="slide" style="background-image: url('assets/ps4.jpeg')"></div>
-          <div class="slide" style="background-image: url('assets/one.jpg')"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">Starpikx<br>In<br>Motion.</h1>
+      <p class="hero-location">JOHANNESBURG STARPIKX STUDIO</p>
+      <div class="scroll-prompt">
+        <span>Scroll Down</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Slideshow Navigation -->
+    <div class="slideshow-nav">
+      <button class="slide-btn prev" aria-label="Previous slide">‹</button>
+      <div class="slide-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+      <button class="slide-btn next" aria-label="Next slide">›</button>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION - Magazine -->
+  <section id="services" class="services-section">
+    <div class="container">
+      
+      <!-- Closed Magazine Cover -->
+      <div class="magazine-cover" id="magazine-cover">
+        <div class="magazine-book">
+          <div class="book-spine"></div>
+          <div class="book-front">
+            <img src="assets/logo.jpg" alt="STARPIKX Logo" class="cover-logo">
+            <h2 class="cover-title">What We Do</h2>
+            <p class="cover-subtitle">STARPIKX PRODUCTIONS</p>
+          </div>
+          <div class="book-back"></div>
         </div>
+        <button class="open-magazine-btn" id="open-magazine">
+          <span>Open Magazine</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Magazine Spreads (Hidden Initially) -->
+      <div class="magazine-spreads" id="magazine-spreads">
         
-        <div class="hero-overlay"></div>
+        <!-- Spread 1: Standard Portraits -->
+        <div class="spread">
+          <div class="spread-left">
+            <div class="spread-content">
+              <p class="spread-label">#PORTRAITS</p>
+              <h2 class="spread-title">Standard<br>Portraits</h2>
+              <p class="spread-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
+            </div>
+          </div>
+          <div class="spread-right">
+            <div class="spread-image">
+              <img src="assets/standard.jpg" alt="Standard portrait photography">
+            </div>
+          </div>
+        </div>
+
+        <!-- Spread 2: Personalised Portraits -->
+        <div class="spread">
+          <div class="spread-left">
+            <div class="spread-image">
+              <img src="assets/personalised.jpg" alt="Personalised portrait session">
+            </div>
+          </div>
+          <div class="spread-right">
+            <div class="spread-content">
+              <p class="spread-label">#PERSONALISED</p>
+              <h2 class="spread-title">Personalised<br>Portraits</h2>
+              <p class="spread-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spread 3: Lifestyle -->
+        <div class="spread">
+          <div class="spread-left">
+            <div class="spread-content">
+              <p class="spread-label">#LIFESTYLE</p>
+              <h2 class="spread-title">Lifestyle</h2>
+              <p class="spread-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
+            </div>
+          </div>
+          <div class="spread-right">
+            <div class="spread-image">
+              <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
+            </div>
+          </div>
+        </div>
+
+        <!-- Spread 4: Fashion & Brand -->
+        <div class="spread">
+          <div class="spread-left">
+            <div class="spread-image">
+              <img src="assets/ps5.jpg" alt="Fashion and brand photography">
+            </div>
+          </div>
+          <div class="spread-right">
+            <div class="spread-content">
+              <p class="spread-label">#FASHION</p>
+              <h2 class="spread-title">Fashion &<br>Brand</h2>
+              <p class="spread-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spread 5: Events -->
+        <div class="spread">
+          <div class="spread-left">
+            <div class="spread-content">
+              <p class="spread-label">#EVENTS</p>
+              <h2 class="spread-title">Events</h2>
+              <p class="spread-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
+            </div>
+          </div>
+          <div class="spread-right">
+            <div class="spread-image">
+              <img src="assets/events2.jpg" alt="Event photography">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="assets/ps1.jpeg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/ps2.jpg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/ps3.jpg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/ps4.jpeg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/one.jpg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/studio.jpg" alt="Portfolio sample"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-content">
+        <h1 class="contact-title">STARPIKX.</h1>
+        <a href="mailto:starpikx@gmail.com" class="contact-email">starpikx@gmail.com</a>
+        <p class="contact-location">JOHANNESBURG, SOUTH AFRICA</p>
         
-        <div class="hero-content">
-          <h1 class="hero-title">Starpiks<br>In<br>Motion.</h1>
-          <p class="hero-location">JOHANNESBURG STARPIKX STUDIO</p>
-          <div class="scroll-prompt">
-            <span>Scroll to Enter</span>
-            <div class="scroll-line"></div>
-          </div>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/starpikx?igsh=MTlidmhsODNmZXFyeg==" target="_blank" rel="noopener" class="contact-btn">
+            <span>INSTAGRAM</span>
+          </a>
+          <a href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" rel="noopener" class="contact-btn">
+            <span>WHATSAPP</span>
+          </a>
         </div>
 
-        <!-- Slideshow Navigation -->
-        <div class="slideshow-nav">
-          <button class="slide-btn prev" aria-label="Previous slide">‹</button>
-          <div class="slide-indicators">
-            <span class="indicator active"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-            <span class="indicator"></span>
-          </div>
-          <button class="slide-btn next" aria-label="Next slide">›</button>
+        <div class="contact-social">
+          <a href="https://www.tiktok.com/@starpikx?_r=1&_t=ZS-93Vlul16pz3" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://youtube.com/@starpikx?si=D4dcl320bkgaE6S0" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.facebook.com/share/1DTgGWt3np/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
-    </section>
 
-    <!-- ARCHIVE PAGE - Magazine Flip Through -->
-    <section class="page" id="page-archive">
-      <div class="magazine-container">
-        <button class="mag-nav prev-page" aria-label="Previous page">‹</button>
-        <button class="mag-nav next-page" aria-label="Next page">›</button>
-
-        <div class="magazine-wrapper">
-          
-          <!-- Spread 1: The Stilled Motion (CHANGED: Image on left, text on right - opposite of reference) -->
-          <div class="magazine-spread active">
-            <div class="magazine-page left">
-              <div class="page-image">
-                <img src="assets/studio.jpg" alt="Portrait with dramatic lighting">
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-content">
-                <p class="page-label">#STARPIKX</p>
-                <h2 class="spread-title">The Stilled Motion</h2>
-                <p class="spread-description">A multi-year exploration of light, form, and the human silhouette within the architectural landscape of South Africa.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spread 2: Standard Portraits -->
-          <div class="magazine-spread">
-            <div class="magazine-page left">
-              <div class="page-content">
-                <p class="page-label">#PORTRAITS</p>
-                <h2 class="spread-title">Standard<br>Portraits</h2>
-                <p class="spread-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-image">
-                <img src="assets/standard.jpg" alt="Standard portrait photography">
-              </div>
-            </div>
-          </div>
-
-          <!-- Spread 3: Personalised Portraits -->
-          <div class="magazine-spread">
-            <div class="magazine-page left">
-              <div class="page-image">
-                <img src="assets/personalised.jpg" alt="Personalised portrait session">
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-content">
-                <p class="page-label">#PERSONALISED</p>
-                <h2 class="spread-title">Personalised<br>Portraits</h2>
-                <p class="spread-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spread 4: Lifestyle -->
-          <div class="magazine-spread">
-            <div class="magazine-page left">
-              <div class="page-content">
-                <p class="page-label">#LIFESTYLE</p>
-                <h2 class="spread-title">Lifestyle</h2>
-                <p class="spread-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-image">
-                <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
-              </div>
-            </div>
-          </div>
-
-          <!-- Spread 5: Fashion & Brand -->
-          <div class="magazine-spread">
-            <div class="magazine-page left">
-              <div class="page-image">
-                <img src="assets/ps5.jpg" alt="Fashion and brand photography">
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-content">
-                <p class="page-label">#FASHION</p>
-                <h2 class="spread-title">Fashion &<br>Brand</h2>
-                <p class="spread-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spread 6: Events -->
-          <div class="magazine-spread">
-            <div class="magazine-page left">
-              <div class="page-content">
-                <p class="page-label">#EVENTS</p>
-                <h2 class="spread-title">Events</h2>
-                <p class="spread-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
-              </div>
-            </div>
-            <div class="magazine-page right">
-              <div class="page-image">
-                <img src="assets/events1.jpg" alt="Event photography">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Page Counter -->
-        <div class="page-counter">
-          <span class="current-page">1</span> / <span class="total-pages">6</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONNECT PAGE - Contact -->
-    <section class="page" id="page-connect">
-      <div class="connect-container">
-        <div class="connect-content">
-          <h1 class="connect-title">STARPIKX.</h1>
-          <a href="mailto:starpikx@gmail.com" class="connect-email">starpikx@gmail.com</a>
-          <p class="connect-location">JOHANNESBURG, SOUTH AFRICA</p>
-          
-          <div class="connect-links">
-            <a href="https://www.instagram.com/starpikx?igsh=MTlidmhsODNmZXFyeg==" target="_blank" rel="noopener" class="connect-btn">
-              <span>INSTAGRAM</span>
-            </a>
-            <a href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" rel="noopener" class="connect-btn">
-              <span>WHATSAPP</span>
-            </a>
-          </div>
-
-          <div class="connect-social">
-            <a href="https://www.tiktok.com/@starpikx?_r=1&_t=ZS-93Vlul16pz3" target="_blank" rel="noopener">TikTok</a>
-            <a href="https://youtube.com/@starpikx?si=D4dcl320bkgaE6S0" target="_blank" rel="noopener">YouTube</a>
-            <a href="https://www.facebook.com/share/1DTgGWt3np/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        </div>
-
-        <!-- Background Image -->
-        <div class="connect-bg" style="background-image: url('assets/client.jpeg')"></div>
-      </div>
-    </section>
-
-  </div>
+      <div class="contact-bg" style="background-image: url('assets/client.jpeg')"></div>
+    </div>
+  </section>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">
@@ -218,6 +223,13 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   </a>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>
