@@ -66,107 +66,113 @@
 
   <!-- SERVICES SECTION - Magazine -->
   <section id="services" class="services-section">
-    <div class="container">
+    <div class="magazine-container">
       
-      <!-- Closed Magazine Cover -->
-      <div class="magazine-cover" id="magazine-cover">
-        <div class="magazine-book">
-          <div class="book-spine"></div>
-          <div class="book-front">
+      <!-- Magazine starts closed -->
+      <div class="magazine-book" id="magazine-book">
+        
+        <!-- Magazine Cover (Front) -->
+        <div class="magazine-cover-page" id="cover-page">
+          <div class="cover-content">
             <img src="assets/logo.jpg" alt="STARPIKX Logo" class="cover-logo">
             <h2 class="cover-title">What We Do</h2>
             <p class="cover-subtitle">STARPIKX PRODUCTIONS</p>
-          </div>
-          <div class="book-back"></div>
-        </div>
-        <button class="open-magazine-btn" id="open-magazine">
-          <span>Open Magazine</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Magazine Spreads (Hidden Initially) -->
-      <div class="magazine-spreads" id="magazine-spreads">
-        
-        <!-- Spread 1: Standard Portraits -->
-        <div class="spread">
-          <div class="spread-left">
-            <div class="spread-content">
-              <p class="spread-label">#PORTRAITS</p>
-              <h2 class="spread-title">Standard<br>Portraits</h2>
-              <p class="spread-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
-            </div>
-          </div>
-          <div class="spread-right">
-            <div class="spread-image">
-              <img src="assets/standard.jpg" alt="Standard portrait photography">
-            </div>
+            <button class="open-cover-btn" id="open-cover">Open</button>
           </div>
         </div>
 
-        <!-- Spread 2: Personalised Portraits -->
-        <div class="spread">
-          <div class="spread-left">
-            <div class="spread-image">
-              <img src="assets/personalised.jpg" alt="Personalised portrait session">
-            </div>
-          </div>
-          <div class="spread-right">
-            <div class="spread-content">
-              <p class="spread-label">#PERSONALISED</p>
-              <h2 class="spread-title">Personalised<br>Portraits</h2>
-              <p class="spread-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
-            </div>
-          </div>
-        </div>
+        <!-- Magazine Pages Container -->
+        <div class="magazine-pages" id="magazine-pages">
+          <button class="mag-nav prev-page" id="prev-page" aria-label="Previous page">‹</button>
+          <button class="mag-nav next-page" id="next-page" aria-label="Next page">›</button>
 
-        <!-- Spread 3: Lifestyle -->
-        <div class="spread">
-          <div class="spread-left">
-            <div class="spread-content">
-              <p class="spread-label">#LIFESTYLE</p>
-              <h2 class="spread-title">Lifestyle</h2>
-              <p class="spread-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
+          <div class="magazine-wrapper">
+            
+            <!-- Spread 1: Standard Portraits -->
+            <div class="magazine-spread active">
+              <div class="magazine-page left">
+                <div class="page-content">
+                  <p class="page-label">#PORTRAITS</p>
+                  <h2 class="spread-title">Standard<br>Portraits</h2>
+                  <p class="spread-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
+                </div>
+              </div>
+              <div class="magazine-page right">
+                <div class="page-image">
+                  <img src="assets/standard.jpg" alt="Standard portrait photography">
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="spread-right">
-            <div class="spread-image">
-              <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
-            </div>
-          </div>
-        </div>
 
-        <!-- Spread 4: Fashion & Brand -->
-        <div class="spread">
-          <div class="spread-left">
-            <div class="spread-image">
-              <img src="assets/ps5.jpg" alt="Fashion and brand photography">
+            <!-- Spread 2: Personalised Portraits -->
+            <div class="magazine-spread">
+              <div class="magazine-page left">
+                <div class="page-image">
+                  <img src="assets/personalised.jpg" alt="Personalised portrait session">
+                </div>
+              </div>
+              <div class="magazine-page right">
+                <div class="page-content">
+                  <p class="page-label">#PERSONALISED</p>
+                  <h2 class="spread-title">Personalised<br>Portraits</h2>
+                  <p class="spread-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="spread-right">
-            <div class="spread-content">
-              <p class="spread-label">#FASHION</p>
-              <h2 class="spread-title">Fashion &<br>Brand</h2>
-              <p class="spread-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Spread 5: Events -->
-        <div class="spread">
-          <div class="spread-left">
-            <div class="spread-content">
-              <p class="spread-label">#EVENTS</p>
-              <h2 class="spread-title">Events</h2>
-              <p class="spread-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
+            <!-- Spread 3: Lifestyle -->
+            <div class="magazine-spread">
+              <div class="magazine-page left">
+                <div class="page-content">
+                  <p class="page-label">#LIFESTYLE</p>
+                  <h2 class="spread-title">Lifestyle</h2>
+                  <p class="spread-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
+                </div>
+              </div>
+              <div class="magazine-page right">
+                <div class="page-image">
+                  <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
+                </div>
+              </div>
             </div>
+
+            <!-- Spread 4: Fashion & Brand -->
+            <div class="magazine-spread">
+              <div class="magazine-page left">
+                <div class="page-image">
+                  <img src="assets/ps5.jpg" alt="Fashion and brand photography">
+                </div>
+              </div>
+              <div class="magazine-page right">
+                <div class="page-content">
+                  <p class="page-label">#FASHION</p>
+                  <h2 class="spread-title">Fashion &<br>Brand</h2>
+                  <p class="spread-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Spread 5: Events -->
+            <div class="magazine-spread">
+              <div class="magazine-page left">
+                <div class="page-content">
+                  <p class="page-label">#EVENTS</p>
+                  <h2 class="spread-title">Events</h2>
+                  <p class="spread-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
+                </div>
+              </div>
+              <div class="magazine-page right">
+                <div class="page-image">
+                  <img src="assets/event5.jpg" alt="Event photography">
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="spread-right">
-            <div class="spread-image">
-              <img src="assets/events2.jpg" alt="Event photography">
-            </div>
+
+          <!-- Page Counter -->
+          <div class="page-counter">
+            <span class="current-page">1</span> / <span class="total-pages">5</span>
           </div>
         </div>
 
@@ -184,7 +190,7 @@
         <div class="portfolio-item"><img src="assets/ps3.jpg" alt="Portfolio sample"></div>
         <div class="portfolio-item"><img src="assets/ps4.jpeg" alt="Portfolio sample"></div>
         <div class="portfolio-item"><img src="assets/one.jpg" alt="Portfolio sample"></div>
-        <div class="portfolio-item"><img src="assets/studio.jpg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/fashion.jpg" alt="Portfolio sample"></div>
       </div>
     </div>
   </section>
@@ -194,7 +200,7 @@
     <div class="contact-container">
       <div class="contact-content">
         <h1 class="contact-title">STARPIKX.</h1>
-        <a href="mailto:starpikx@gmail.com" class="contact-email">starpikx@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#f98a8d988b89909281b99e94989095d79a9694" class="contact-email"><span class="__cf_email__" data-cfemail="eb989f8a999b828093ab8c868a8287c5888486">[email&#160;protected]</span></a>
         <p class="contact-location">JOHANNESBURG, SOUTH AFRICA</p>
         
         <div class="contact-links">
@@ -227,10 +233,3 @@
   <!-- Back to Top Button -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </button>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>

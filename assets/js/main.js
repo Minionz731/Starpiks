@@ -127,51 +127,161 @@ document.addEventListener('DOMContentLoaded', function() {
   
   startSlideshow();
   
-  // ==================== MAGAZINE OPENING ====================
+  // ==================== MAGAZINE OPENING & FLIPPING ====================
   
-  const openMagazineBtn = document.getElementById('open-magazine');
-  const magazineCover = document.getElementById('magazine-cover');
-  const magazineSpreads = document.getElementById('magazine-spreads');
+  const openCoverBtn = document.getElementById('open-cover');
+  const coverPage = document.getElementById('cover-page');
+  const magazinePages = document.getElementById('magazine-pages');
+  const magazineSpreads = document.querySelectorAll('.magazine-spread');
+  const prevPageBtn = document.getElementById('prev-page');
+  const nextPageBtn = document.getElementById('next-page');
+  const currentPageElement = document.querySelector('.current-page');
+  const totalPagesElement = document.querySelector('.total-pages');
   
-  if (openMagazineBtn) {
-    openMagazineBtn.addEventListener('click', function() {
-      // Hide cover with animation
-      magazineCover.classList.add('opened');
+  let currentSpread = 0;
+  let magazineOpened = false;
+  
+  // Set total pages
+  if (totalPagesElement) {
+    totalPagesElement.textContent = magazineSpreads.length;
+  }
+  
+  // Open Magazine Cover
+  if (openCoverBtn) {
+    openCoverBtn.addEventListener('click', function() {
+      magazineOpened = true;
       
-      // Show spreads after a delay
+      // Hide cover
+      coverPage.classList.add('opened');
+      
+      // Show magazine pages after animation
       setTimeout(function() {
-        magazineSpreads.classList.add('opened');
-        
-        // Scroll to spreads smoothly
-        setTimeout(function() {
-          magazineSpreads.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 300);
+        magazinePages.classList.add('opened');
       }, 600);
     });
   }
   
-  // Auto-open magazine when scrolled into view
-  const observerOptions = {
-    threshold: 0.3,
-    rootMargin: '0px 0px -100px 0px'
-  };
-  
-  const magazineObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !magazineCover.classList.contains('opened')) {
-        // Auto-open after a brief delay when user scrolls to services section
-        setTimeout(function() {
-          if (openMagazineBtn) {
-            openMagazineBtn.click();
-          }
-        }, 500);
-        magazineObserver.unobserve(entry.target);
+  // Show Spread Function
+  function showSpread(index) {
+    if (index < 0) index = 0;
+    if (index >= magazineSpreads.length) index = magazineSpreads.length - 1;
+    
+    currentSpread = index;
+    
+    magazineSpreads.forEach((spread, i) => {
+      spread.classList.remove('active', 'exiting');
+      
+      if (i === currentSpread) {
+        spread.classList.add('active');
+      } else if (i < currentSpread) {
+        spread.classList.add('exiting');
       }
     });
-  }, observerOptions);
+    
+    // Update page counter
+    if (currentPageElement) {
+      currentPageElement.textContent = currentSpread + 1;
+    }
+    
+    // Update button states
+    updateMagazineButtons();
+  }
   
-  if (magazineCover) {
-    magazineObserver.observe(magazineCover);
+  // Update Magazine Navigation Buttons
+  function updateMagazineButtons() {
+    if (prevPageBtn) {
+      if (currentSpread === 0) {
+        prevPageBtn.disabled = true;
+        prevPageBtn.style.opacity = '0.3';
+      } else {
+        prevPageBtn.disabled = false;
+        prevPageBtn.style.opacity = '1';
+      }
+    }
+    
+    if (nextPageBtn) {
+      if (currentSpread === magazineSpreads.length - 1) {
+        nextPageBtn.disabled = true;
+        nextPageBtn.style.opacity = '0.3';
+      } else {
+        nextPageBtn.disabled = false;
+        nextPageBtn.style.opacity = '1';
+      }
+    }
+  }
+  
+  // Navigation Buttons
+  if (nextPageBtn) {
+    nextPageBtn.addEventListener('click', function() {
+      if (currentSpread < magazineSpreads.length - 1) {
+        showSpread(currentSpread + 1);
+      }
+    });
+  }
+  
+  if (prevPageBtn) {
+    prevPageBtn.addEventListener('click', function() {
+      if (currentSpread > 0) {
+        showSpread(currentSpread - 1);
+      }
+    });
+  }
+  
+  // Keyboard Navigation for Magazine
+  document.addEventListener('keydown', function(e) {
+    if (magazineOpened && magazinePages.classList.contains('opened')) {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (currentSpread < magazineSpreads.length - 1) {
+          showSpread(currentSpread + 1);
+        }
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (currentSpread > 0) {
+          showSpread(currentSpread - 1);
+        }
+      }
+    }
+  });
+  
+  // Touch Swipe Support for Magazine
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  const magazineWrapper = document.querySelector('.magazine-wrapper');
+  
+  if (magazineWrapper) {
+    magazineWrapper.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    magazineWrapper.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+  }
+  
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    
+    if (touchEndX < touchStartX - swipeThreshold) {
+      // Swiped left - next page
+      if (currentSpread < magazineSpreads.length - 1) {
+        showSpread(currentSpread + 1);
+      }
+    }
+    
+    if (touchEndX > touchStartX + swipeThreshold) {
+      // Swiped right - previous page
+      if (currentSpread > 0) {
+        showSpread(currentSpread - 1);
+      }
+    }
+  }
+  
+  // Initialize magazine
+  if (magazineSpreads.length > 0) {
+    showSpread(0);
   }
   
   // ==================== BACK TO TOP BUTTON ====================
