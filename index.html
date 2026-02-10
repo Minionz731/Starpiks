@@ -42,7 +42,7 @@
     <div class="hero-overlay"></div>
     
     <div class="hero-content">
-      <h1 class="hero-title">Starpikx<br>In<br>Motion.</h1>
+      <h1 class="hero-title">Stilled<br>Motion.</h1>
       <p class="hero-location">JOHANNESBURG STARPIKX STUDIO</p>
       <div class="scroll-prompt">
         <span>Scroll Down</span>
@@ -64,119 +64,135 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION - Magazine -->
+  <!-- SERVICES SECTION - Flippable Magazine -->
   <section id="services" class="services-section">
     <div class="magazine-container">
       
-      <!-- Magazine starts closed -->
-      <div class="magazine-book" id="magazine-book">
+      <!-- Flip Book -->
+      <div class="flipbook" id="flipbook">
         
-        <!-- Magazine Cover (Front) -->
-        <div class="magazine-cover-page" id="cover-page">
-          <div class="cover-content">
+        <!-- Page 0 - Front Cover -->
+        <div class="page cover-page">
+          <div class="page-content cover-content">
             <img src="assets/logo.jpg" alt="STARPIKX Logo" class="cover-logo">
             <h2 class="cover-title">What We Do</h2>
             <p class="cover-subtitle">STARPIKX PRODUCTIONS</p>
-            <button class="open-cover-btn" id="open-cover">Open</button>
+            <div class="cover-hint">
+              <span>Click arrows to flip →</span>
+            </div>
           </div>
         </div>
 
-        <!-- Magazine Pages Container -->
-        <div class="magazine-pages" id="magazine-pages">
-          <button class="mag-nav prev-page" id="prev-page" aria-label="Previous page">‹</button>
-          <button class="mag-nav next-page" id="next-page" aria-label="Next page">›</button>
-
-          <div class="magazine-wrapper">
-            
-            <!-- Spread 1: Standard Portraits -->
-            <div class="magazine-spread active">
-              <div class="magazine-page left">
-                <div class="page-content">
-                  <p class="page-label">#PORTRAITS</p>
-                  <h2 class="spread-title">Standard<br>Portraits</h2>
-                  <p class="spread-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
-                </div>
-              </div>
-              <div class="magazine-page right">
-                <div class="page-image">
-                  <img src="assets/standard.jpg" alt="Standard portrait photography">
-                </div>
-              </div>
-            </div>
-
-            <!-- Spread 2: Personalised Portraits -->
-            <div class="magazine-spread">
-              <div class="magazine-page left">
-                <div class="page-image">
-                  <img src="assets/personalised.jpg" alt="Personalised portrait session">
-                </div>
-              </div>
-              <div class="magazine-page right">
-                <div class="page-content">
-                  <p class="page-label">#PERSONALISED</p>
-                  <h2 class="spread-title">Personalised<br>Portraits</h2>
-                  <p class="spread-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Spread 3: Lifestyle -->
-            <div class="magazine-spread">
-              <div class="magazine-page left">
-                <div class="page-content">
-                  <p class="page-label">#LIFESTYLE</p>
-                  <h2 class="spread-title">Lifestyle</h2>
-                  <p class="spread-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
-                </div>
-              </div>
-              <div class="magazine-page right">
-                <div class="page-image">
-                  <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
-                </div>
-              </div>
-            </div>
-
-            <!-- Spread 4: Fashion & Brand -->
-            <div class="magazine-spread">
-              <div class="magazine-page left">
-                <div class="page-image">
-                  <img src="assets/ps5.jpg" alt="Fashion and brand photography">
-                </div>
-              </div>
-              <div class="magazine-page right">
-                <div class="page-content">
-                  <p class="page-label">#FASHION</p>
-                  <h2 class="spread-title">Fashion &<br>Brand</h2>
-                  <p class="spread-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Spread 5: Events -->
-            <div class="magazine-spread">
-              <div class="magazine-page left">
-                <div class="page-content">
-                  <p class="page-label">#EVENTS</p>
-                  <h2 class="spread-title">Events</h2>
-                  <p class="spread-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
-                </div>
-              </div>
-              <div class="magazine-page right">
-                <div class="page-image">
-                  <img src="assets/event5.jpg" alt="Event photography">
-                </div>
-              </div>
-            </div>
-
+        <!-- Page 1 - Standard Portraits (Left Page) -->
+        <div class="page">
+          <div class="page-content">
+            <p class="page-label">#PORTRAITS</p>
+            <h2 class="page-title">Standard<br>Portraits</h2>
+            <p class="page-description">Portrait sessions for personal moments — clean, intentional portraiture for milestones and headshots.</p>
           </div>
+        </div>
 
-          <!-- Page Counter -->
-          <div class="page-counter">
-            <span class="current-page">1</span> / <span class="total-pages">5</span>
+        <!-- Page 2 - Standard Portraits (Right Page - Image) -->
+        <div class="page">
+          <div class="page-image">
+            <img src="assets/standard.jpg" alt="Standard portrait photography">
+          </div>
+        </div>
+
+        <!-- Page 3 - Personalised Portraits (Left Page - Image) -->
+        <div class="page">
+          <div class="page-image">
+            <img src="assets/personalised.jpg" alt="Personalised portrait session">
+          </div>
+        </div>
+
+        <!-- Page 4 - Personalised Portraits (Right Page) -->
+        <div class="page">
+          <div class="page-content">
+            <p class="page-label">#PERSONALISED</p>
+            <h2 class="page-title">Personalised<br>Portraits</h2>
+            <p class="page-description">Concept-driven sessions shaped around the individual and creative vision, tailored to your moodboard.</p>
+          </div>
+        </div>
+
+        <!-- Page 5 - Lifestyle (Left Page) -->
+        <div class="page">
+          <div class="page-content">
+            <p class="page-label">#LIFESTYLE</p>
+            <h2 class="page-title">Lifestyle</h2>
+            <p class="page-description">Dynamic coverage of real-life moments and environments with natural, candid authenticity.</p>
+          </div>
+        </div>
+
+        <!-- Page 6 - Lifestyle (Right Page - Image) -->
+        <div class="page">
+          <div class="page-image">
+            <img src="assets/lifestyle.jpg" alt="Lifestyle photography">
+          </div>
+        </div>
+
+        <!-- Page 7 - Fashion & Brand (Left Page - Image) -->
+        <div class="page">
+          <div class="page-image">
+            <img src="assets/ps5.jpg" alt="Fashion and brand photography">
+          </div>
+        </div>
+
+        <!-- Page 8 - Fashion & Brand (Right Page) -->
+        <div class="page">
+          <div class="page-content">
+            <p class="page-label">#FASHION</p>
+            <h2 class="page-title">Fashion &<br>Brand</h2>
+            <p class="page-description">Visual production and creative direction for fashion labels, brand campaigns, and commercial visibility.</p>
+          </div>
+        </div>
+
+        <!-- Page 9 - Events (Left Page) -->
+        <div class="page">
+          <div class="page-content">
+            <p class="page-label">#EVENTS</p>
+            <h2 class="page-title">Events</h2>
+            <p class="page-description">Structured photographic coverage for private and corporate events. We focus on capturing pivotal moments as they naturally unfold.</p>
+          </div>
+        </div>
+
+        <!-- Page 10 - Events (Right Page - Image) -->
+        <div class="page">
+          <div class="page-image">
+            <img src="assets/events1.jpg" alt="Event photography">
+          </div>
+        </div>
+
+        <!-- Page 11 - Back Cover -->
+        <div class="page cover-page back-cover">
+          <div class="page-content cover-content">
+            <h2 class="back-cover-title">STARPIKX</h2>
+            <p class="back-cover-text">Johannesburg, South Africa</p>
+            <p class="back-cover-email">starpikx@gmail.com</p>
           </div>
         </div>
 
       </div>
+
+      <!-- Magazine Navigation -->
+      <div class="magazine-controls">
+        <button class="flip-btn prev-btn" id="prev-page" aria-label="Previous page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        
+        <div class="page-indicator">
+          <span id="current-page">1</span> / <span id="total-pages">6</span>
+        </div>
+        
+        <button class="flip-btn next-btn" id="next-page" aria-label="Next page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
     </div>
   </section>
 
@@ -190,7 +206,7 @@
         <div class="portfolio-item"><img src="assets/ps3.jpg" alt="Portfolio sample"></div>
         <div class="portfolio-item"><img src="assets/ps4.jpeg" alt="Portfolio sample"></div>
         <div class="portfolio-item"><img src="assets/one.jpg" alt="Portfolio sample"></div>
-        <div class="portfolio-item"><img src="assets/fashion.jpg" alt="Portfolio sample"></div>
+        <div class="portfolio-item"><img src="assets/studio.jpg" alt="Portfolio sample"></div>
       </div>
     </div>
   </section>
@@ -200,7 +216,7 @@
     <div class="contact-container">
       <div class="contact-content">
         <h1 class="contact-title">STARPIKX.</h1>
-        <a href="/cdn-cgi/l/email-protection#f98a8d988b89909281b99e94989095d79a9694" class="contact-email"><span class="__cf_email__" data-cfemail="eb989f8a999b828093ab8c868a8287c5888486">[email&#160;protected]</span></a>
+        <a href="mailto:starpikx@gmail.com" class="contact-email">starpikx@gmail.com</a>
         <p class="contact-location">JOHANNESBURG, SOUTH AFRICA</p>
         
         <div class="contact-links">
@@ -237,6 +253,9 @@
     </svg>
   </button>
 
+  <!-- Turn.js Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Main JavaScript for Starpikx One-Page Scrolling Website
+// Main JavaScript for Starpikx One-Page Scrolling Website with Flip Magazine
 
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(currentSlide);
   }
   
-  function prevSlide() {
+  function prevSlideFunc() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(currentSlide);
   }
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (prevBtn) {
     prevBtn.addEventListener('click', function() {
       stopSlideshow();
-      prevSlide();
+      prevSlideFunc();
       startSlideshow();
     });
   }
@@ -127,161 +127,111 @@ document.addEventListener('DOMContentLoaded', function() {
   
   startSlideshow();
   
-  // ==================== MAGAZINE OPENING & FLIPPING ====================
+  // ==================== FLIP MAGAZINE (Turn.js) ====================
   
-  const openCoverBtn = document.getElementById('open-cover');
-  const coverPage = document.getElementById('cover-page');
-  const magazinePages = document.getElementById('magazine-pages');
-  const magazineSpreads = document.querySelectorAll('.magazine-spread');
-  const prevPageBtn = document.getElementById('prev-page');
-  const nextPageBtn = document.getElementById('next-page');
-  const currentPageElement = document.querySelector('.current-page');
-  const totalPagesElement = document.querySelector('.total-pages');
-  
-  let currentSpread = 0;
-  let magazineOpened = false;
-  
-  // Set total pages
-  if (totalPagesElement) {
-    totalPagesElement.textContent = magazineSpreads.length;
-  }
-  
-  // Open Magazine Cover
-  if (openCoverBtn) {
-    openCoverBtn.addEventListener('click', function() {
-      magazineOpened = true;
-      
-      // Hide cover
-      coverPage.classList.add('opened');
-      
-      // Show magazine pages after animation
-      setTimeout(function() {
-        magazinePages.classList.add('opened');
-      }, 600);
-    });
-  }
-  
-  // Show Spread Function
-  function showSpread(index) {
-    if (index < 0) index = 0;
-    if (index >= magazineSpreads.length) index = magazineSpreads.length - 1;
+  // Wait for jQuery and Turn.js to load
+  if (typeof jQuery !== 'undefined' && typeof jQuery.fn.turn !== 'undefined') {
     
-    currentSpread = index;
+    const $flipbook = $('#flipbook');
     
-    magazineSpreads.forEach((spread, i) => {
-      spread.classList.remove('active', 'exiting');
-      
-      if (i === currentSpread) {
-        spread.classList.add('active');
-      } else if (i < currentSpread) {
-        spread.classList.add('exiting');
-      }
+    // Initialize Turn.js
+    $flipbook.turn({
+      width: 1200,
+      height: 700,
+      autoCenter: true,
+      acceleration: true,
+      gradients: true,
+      elevation: 50,
+      duration: 1000,
+      pages: 12 // Total pages including covers
     });
     
-    // Update page counter
-    if (currentPageElement) {
-      currentPageElement.textContent = currentSpread + 1;
-    }
-    
-    // Update button states
-    updateMagazineButtons();
-  }
-  
-  // Update Magazine Navigation Buttons
-  function updateMagazineButtons() {
-    if (prevPageBtn) {
-      if (currentSpread === 0) {
-        prevPageBtn.disabled = true;
-        prevPageBtn.style.opacity = '0.3';
+    // Update page indicator
+    function updatePageIndicator() {
+      const currentPage = $flipbook.turn('page');
+      const totalPages = $flipbook.turn('pages');
+      
+      // Display as spread numbers (cover is 1, then pairs)
+      const displayPage = Math.ceil(currentPage / 2);
+      const displayTotal = Math.ceil(totalPages / 2);
+      
+      $('#current-page').text(displayPage);
+      $('#total-pages').text(displayTotal);
+      
+      // Update button states
+      const prevButton = $('#prev-page');
+      const nextButton = $('#next-page');
+      
+      if (currentPage === 1) {
+        prevButton.prop('disabled', true);
       } else {
-        prevPageBtn.disabled = false;
-        prevPageBtn.style.opacity = '1';
+        prevButton.prop('disabled', false);
       }
-    }
-    
-    if (nextPageBtn) {
-      if (currentSpread === magazineSpreads.length - 1) {
-        nextPageBtn.disabled = true;
-        nextPageBtn.style.opacity = '0.3';
+      
+      if (currentPage === totalPages) {
+        nextButton.prop('disabled', true);
       } else {
-        nextPageBtn.disabled = false;
-        nextPageBtn.style.opacity = '1';
+        nextButton.prop('disabled', false);
       }
     }
-  }
-  
-  // Navigation Buttons
-  if (nextPageBtn) {
-    nextPageBtn.addEventListener('click', function() {
-      if (currentSpread < magazineSpreads.length - 1) {
-        showSpread(currentSpread + 1);
+    
+    // Listen for page turn events
+    $flipbook.bind('turned', function(event, page, view) {
+      updatePageIndicator();
+    });
+    
+    // Navigation buttons
+    $('#prev-page').click(function() {
+      $flipbook.turn('previous');
+    });
+    
+    $('#next-page').click(function() {
+      $flipbook.turn('next');
+    });
+    
+    // Initialize page indicator
+    updatePageIndicator();
+    
+    // Responsive magazine
+    function resizeMagazine() {
+      const windowWidth = $(window).width();
+      let magazineWidth, magazineHeight;
+      
+      if (windowWidth > 1024) {
+        magazineWidth = 1200;
+        magazineHeight = 700;
+      } else if (windowWidth > 768) {
+        magazineWidth = 900;
+        magazineHeight = 600;
+      } else if (windowWidth > 480) {
+        magazineWidth = 600;
+        magazineHeight = 500;
+      } else {
+        magazineWidth = windowWidth - 40;
+        magazineHeight = 450;
+      }
+      
+      $flipbook.turn('size', magazineWidth, magazineHeight);
+    }
+    
+    $(window).resize(function() {
+      resizeMagazine();
+    });
+    
+    // Initial resize
+    resizeMagazine();
+    
+    // Keyboard navigation
+    $(document).keydown(function(e){
+      if (e.keyCode == 37) { // Left arrow
+        $flipbook.turn('previous');
+      } else if (e.keyCode == 39) { // Right arrow
+        $flipbook.turn('next');
       }
     });
-  }
-  
-  if (prevPageBtn) {
-    prevPageBtn.addEventListener('click', function() {
-      if (currentSpread > 0) {
-        showSpread(currentSpread - 1);
-      }
-    });
-  }
-  
-  // Keyboard Navigation for Magazine
-  document.addEventListener('keydown', function(e) {
-    if (magazineOpened && magazinePages.classList.contains('opened')) {
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        if (currentSpread < magazineSpreads.length - 1) {
-          showSpread(currentSpread + 1);
-        }
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        if (currentSpread > 0) {
-          showSpread(currentSpread - 1);
-        }
-      }
-    }
-  });
-  
-  // Touch Swipe Support for Magazine
-  let touchStartX = 0;
-  let touchEndX = 0;
-  
-  const magazineWrapper = document.querySelector('.magazine-wrapper');
-  
-  if (magazineWrapper) {
-    magazineWrapper.addEventListener('touchstart', function(e) {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
     
-    magazineWrapper.addEventListener('touchend', function(e) {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-  }
-  
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    
-    if (touchEndX < touchStartX - swipeThreshold) {
-      // Swiped left - next page
-      if (currentSpread < magazineSpreads.length - 1) {
-        showSpread(currentSpread + 1);
-      }
-    }
-    
-    if (touchEndX > touchStartX + swipeThreshold) {
-      // Swiped right - previous page
-      if (currentSpread > 0) {
-        showSpread(currentSpread - 1);
-      }
-    }
-  }
-  
-  // Initialize magazine
-  if (magazineSpreads.length > 0) {
-    showSpread(0);
+  } else {
+    console.warn('Turn.js or jQuery not loaded. Magazine flip will not work.');
   }
   
   // ==================== BACK TO TOP BUTTON ====================
@@ -316,15 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }, { threshold: 0.1 });
-  
-  // Observe spreads for fade-in
-  const spreads = document.querySelectorAll('.spread');
-  spreads.forEach(spread => {
-    spread.style.opacity = '0';
-    spread.style.transform = 'translateY(30px)';
-    spread.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    fadeObserver.observe(spread);
-  });
   
   // Observe portfolio items
   const portfolioItems = document.querySelectorAll('.portfolio-item');
