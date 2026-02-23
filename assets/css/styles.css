@@ -173,10 +173,10 @@ html, body {
 }
 
 .hero-title {
-  font-family: var(--serif-font);
+  font-family: var(--lora-font);
   font-size: clamp(60px, 12vw, 140px);
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 60;
+  font-style:normal;
   line-height: 0.9;
   letter-spacing: -2px;
   margin-bottom: 24px;
@@ -820,9 +820,36 @@ html, body {
     height: 140px;
   }
   
-  .cover-title {
-    font-size: 42px;
-  }
+ .cover-title {
+  font-size: 42px;
+}
+
+/* ADD THESE NEW LINES: */
+.magazine-cover-page {
+  width: 90%;
+  max-width: 360px;
+  height: auto;
+  min-height: 480px;
+}
+
+.cover-content {
+  padding: 40px 24px;
+}
+
+.cover-subtitle {
+  font-size: 10px;
+  margin-bottom: 30px;
+}
+
+.open-cover-btn {
+  margin-top: 30px;
+  padding: 12px 36px;
+  font-size: 11px;
+}
+
+.page-content {
+  padding: 40px 30px;
+}
   
   .page-content {
     padding: 40px 30px;
@@ -870,10 +897,56 @@ html, body {
     font-size: 44px;
   }
   
-  .flipbook {
-    max-width: 100%;
-    height: 450px;
-  }
+ .flipbook {
+  max-width: 100%;
+  height: 450px;
+}
+
+/* ADD THESE NEW LINES: */
+.magazine-cover-page {
+  width: 95%;
+  max-width: 320px;
+  height: auto;
+  min-height: 440px;
+}
+
+.cover-content {
+  padding: 30px 16px;
+}
+
+.cover-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 24px;
+}
+
+.cover-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cover-subtitle {
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.open-cover-btn {
+  margin-top: 24px;
+  padding: 10px 28px;
+  font-size: 10px;
+}
+
+.services-section {
+  padding: 60px 12px;
+}
+
+.page-content {
+  padding: 30px 20px;
+}
+
+.page-title {
+  font-size: 28px;
+}
   
   .page-title {
     font-size: 28px;
