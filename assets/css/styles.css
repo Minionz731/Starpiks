@@ -261,6 +261,80 @@ img { display: block; max-width: 100%; }
 .back-to-top.visible { opacity: 1; visibility: visible; }
 .back-to-top:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
 
+/* ==================== HAMBURGER + MOBILE MENU ==================== */
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1100;
+  position: relative;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--white);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.98);
+  backdrop-filter: blur(16px);
+  z-index: 1050;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-link {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: rgba(255,255,255,0.75);
+  transition: color 0.2s ease;
+}
+
+.mobile-link:hover { color: var(--white); }
+
+.mobile-socials {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.mobile-socials a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.mobile-socials a:hover { color: var(--white); }
+
 /* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 1024px) {
@@ -272,7 +346,9 @@ img { display: block; max-width: 100%; }
   .main-nav { padding: 18px 24px; }
   .main-nav.scrolled { padding: 14px 24px; }
   .nav-socials { display: none; }
-  .nav-links { gap: 22px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .mobile-menu { display: flex; }
 
   .hero-section { padding: 0 24px 64px; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 18px; }
