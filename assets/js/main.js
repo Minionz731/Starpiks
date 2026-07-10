@@ -13,7 +13,7 @@
     document.body.style.overflow = '';
   }
 
-  setTimeout(dismiss, 3800);
+  setTimeout(dismiss, 1500);
   loader.addEventListener('click', dismiss, { once: true });
 })();
 
