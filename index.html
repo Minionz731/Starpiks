@@ -1,603 +1,748 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>starpikx — Event Photography &amp; Video, Johannesburg</title>
-<script src="assets/js/dc-runtime.js" defer></script>
+<title>starpikx — Event, Wedding &amp; Portrait Photography, Johannesburg</title>
+<meta name="description" content="starpikx productions — event photography and video, weddings and portraits in Johannesburg, South Africa. Delivered exactly when we say.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="starpikx — Event, Wedding &amp; Portrait Photography">
+<meta property="og:description" content="Event photography and video, weddings and portraits in Johannesburg, South Africa.">
+<meta property="og:image" content="https://starpikx.com/assets/img/photo-01.jpg">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="assets/img/logo.png">
+<style>
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-03.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-04.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-05.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-06.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-03.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-04.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-05.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-06.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-03.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-04.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-05.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-06.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-03.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-04.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-05.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-06.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-07.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-08.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/font-09.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-07.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-08.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/fonts/font-09.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-07.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-08.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/font-09.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-07.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-08.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/font-09.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{
+  --bg:#0b0b0b;
+  --ink:#f2f0ed;
+  --muted:rgba(242,240,237,0.56);
+  --faint:rgba(242,240,237,0.34);
+  --line:rgba(242,240,237,0.13);
+  --pad:clamp(20px,5vw,72px);
+  --maxw:1560px;
+  --gap:clamp(12px,1.5vw,22px);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  font-size:15px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--bg)}
+:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.label{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--faint);font-weight:600;display:block}
+.display{font-family:'Space Grotesk',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.02}
+.muted{color:var(--muted)}
+.hr{height:1px;background:var(--line);border:0}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px var(--pad);
+  background:rgba(11,11,11,0.6);
+  backdrop-filter:blur(16px) saturate(130%);
+  -webkit-backdrop-filter:blur(16px) saturate(130%);
+  border-bottom:1px solid var(--line);
+}
+.nav img{height:17px;width:auto}
+.nav-links{display:flex;align-items:center;gap:clamp(16px,2.4vw,34px)}
+.nav-links a{font-size:12px;letter-spacing:0.07em;color:var(--muted);transition:color .2s;padding:10px 2px}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.book{
+  color:var(--bg);background:var(--ink);
+  font-size:12px;font-weight:700;letter-spacing:0.04em;
+  padding:9px 18px;border-radius:2px;transition:opacity .2s;
+}
+.nav-links a.book:hover{opacity:.82;color:var(--bg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.62) 0%,rgba(11,11,11,.08) 26%,rgba(11,11,11,.62) 58%,rgba(11,11,11,.9) 86%,var(--bg) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(26px,3.4vw,44px)}
+.hero h1{font-size:clamp(37px,5.4vw,84px);max-width:17ch;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--muted)}
+.hero-foot{
+  position:relative;z-index:2;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  flex-wrap:wrap;gap:26px;margin-top:26px;
+}
+.hero-foot p{max-width:44ch;color:var(--muted);font-size:15px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  font-size:13px;font-weight:600;letter-spacing:0.02em;
+  padding:14px 26px;border-radius:2px;white-space:nowrap;transition:.2s;
+}
+.btn-solid{background:var(--ink);color:var(--bg)}
+.btn-solid:hover{opacity:.82;color:var(--bg)}
+.btn-ghost{border:1px solid rgba(242,240,237,0.28);color:var(--ink)}
+.btn-ghost:hover{background:rgba(242,240,237,0.09)}
+.hero-meta{
+  position:relative;z-index:2;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  margin-top:clamp(28px,4vw,52px);padding:16px 0 clamp(22px,3vw,34px);
+  border-top:1px solid var(--line);
+}
+
+/* ---------- statement ---------- */
+.statement{padding-top:clamp(64px,9vw,132px);padding-bottom:clamp(64px,9vw,132px)}
+.statement .big{
+  font-family:'Space Grotesk',sans-serif;font-weight:500;letter-spacing:-0.02em;
+  font-size:clamp(21px,2.5vw,38px);line-height:1.24;max-width:24ch;
+}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:clamp(40px,5vw,72px)}
+.principle{border-top:1px solid var(--line);padding-top:16px}
+.principle h4{font-size:14px;font-weight:700;letter-spacing:0.01em;margin-bottom:6px}
+.principle p{font-size:13.5px;color:var(--muted);max-width:32ch}
+
+/* ---------- services ---------- */
+.svc-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:26px}
+.svc-head h2{font-size:clamp(24px,3.2vw,44px)}
+.svc{
+  display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);
+  gap:clamp(26px,4.5vw,76px);
+  padding:clamp(46px,6.5vw,104px) 0;
+  border-top:1px solid var(--line);
+  align-items:start;
+}
+.svc-num{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.svc-num span:first-child{font-family:'Space Grotesk',sans-serif;font-size:13px;color:var(--faint)}
+.svc-num i{display:block;height:1px;width:34px;background:var(--line);flex:none}
+.svc h3{font-size:clamp(28px,3.5vw,54px)}
+.svc-text p{margin-top:18px;color:var(--muted);max-width:46ch;font-size:15px}
+.svc-list{list-style:none;margin-top:clamp(24px,3vw,38px);border-top:1px solid var(--line)}
+.svc-list li{font-size:13.5px;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--line)}
+.svc-media{display:grid;gap:var(--gap)}
+.svc-media img{border-radius:2px}
+.fig{overflow:hidden;border-radius:2px;background:#141414}
+.fig img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.fig:hover img{transform:scale(1.035)}
+.ar-1 img{aspect-ratio:1/1;object-fit:cover;height:100%}
+.ar-34 img{aspect-ratio:3/4;object-fit:cover;height:100%}
+.ar-43 img{aspect-ratio:4/3;object-fit:cover;height:100%}
+.ar-169 img{aspect-ratio:16/9;object-fit:cover;height:100%}
+.span2{grid-column:span 2}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+
+/* ---------- bleed ---------- */
+.bleed{position:relative;min-height:min(80vh,740px);display:grid;place-items:center;overflow:hidden;background:#000}
+.bleed>img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 24%,#000 76%,transparent);
+  mask-image:linear-gradient(180deg,transparent,#000 24%,#000 76%,transparent);
+}
+.bleed-in{position:relative;z-index:2;text-align:center;padding:0 var(--pad)}
+.bleed-in p{font-size:clamp(29px,5.2vw,74px);margin-top:16px;max-width:17ch}
+
+/* ---------- work ---------- */
+.work-sec{padding-top:clamp(64px,9vw,130px);padding-bottom:clamp(64px,9vw,130px)}
+.work-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:18px;margin-bottom:clamp(28px,4vw,52px)}
+.work-head h2{font-size:clamp(24px,3.2vw,44px)}
+.work-head a{font-size:12.5px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s}
+.work-head a:hover{color:var(--ink);border-color:var(--ink)}
+.work{columns:3;column-gap:var(--gap)}
+.tile{break-inside:avoid;margin-bottom:var(--gap);overflow:hidden;border-radius:2px;background:#141414}
+.tile img{opacity:.94;transition:opacity .4s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.tile:hover img{opacity:1;transform:scale(1.03)}
+
+/* ---------- contact ---------- */
+.contact{position:relative;overflow:hidden;padding:clamp(72px,10vw,150px) 0 clamp(56px,7vw,110px)}
+.contact>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+.contact-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.78),rgba(11,11,11,.95))}
+.contact-in{position:relative;z-index:2}
+.contact h2{font-size:clamp(34px,6vw,84px);max-width:14ch;margin-top:16px}
+.contact p{margin-top:20px;color:var(--muted);max-width:48ch}
+.contact .actions{margin-top:clamp(28px,3.5vw,44px)}
+.contact-rows{margin-top:clamp(44px,6vw,84px);border-top:1px solid var(--line)}
+.crow{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line);transition:.2s}
+.crow:hover{padding-left:8px}
+.crow span:first-child{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.crow span:last-child{font-size:14.5px}
+
+/* ---------- footer ---------- */
+footer{padding-top:clamp(38px,5vw,64px);padding-bottom:34px}
+.foot-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:26px}
+.foot-top img{height:20px;width:auto;margin-bottom:12px}
+.foot-top p{font-size:13px;color:var(--muted);max-width:28ch}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{font-size:12.5px;color:var(--muted);transition:.2s;padding:8px 0}
+.foot-links a:hover{color:var(--ink)}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:clamp(34px,4vw,54px);padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;color:var(--faint)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1024px){
+  .svc{grid-template-columns:1fr;gap:30px}
+  .svc-media{order:2}
+  .svc-flip .svc-media{order:0}
+}
+@media (max-width:860px){
+  .work{columns:2}
+  .principles{grid-template-columns:1fr;gap:0}
+  .principle{padding:14px 0}
+  .principle:last-child{border-bottom:1px solid var(--line)}
+}
+@media (max-width:640px){
+  body{font-size:14.5px}
+  .work{columns:1}
+  .nav img{height:15px}
+  .g3{grid-template-columns:1fr 1fr}
+  .hero{min-height:92svh}
+  .btn{padding:13px 20px;font-size:12.5px}
+}
+@media (max-width:430px){
+  .nav-links{gap:13px}
+  .nav-links a.hide-xs{display:none}
+  .nav-links a.book{padding:8px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<style>/* cyrillic-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-01.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-02.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-03.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-04.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-05.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-06.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-01.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-02.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-03.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-04.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-05.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-06.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-01.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-02.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-03.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-04.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-05.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-06.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-01.woff2") format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-02.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-03.woff2") format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-04.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-05.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-06.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-07.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-08.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("assets/fonts/font-09.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-07.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-08.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("assets/fonts/font-09.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-07.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-08.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/font-09.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-07.woff2") format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-08.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("assets/fonts/font-09.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { background:#0a0a0a; }
-  ::selection { background:#fff; color:#000; }
-  @keyframes fadeUp { from { opacity:0; transform:translateY(24px);} to { opacity:1; transform:translateY(0);} }
-  @keyframes slowZoom { from { transform:scale(1.02);} to { transform:scale(1.14);} }
-  @keyframes marquee { from { transform:translateX(0);} to { transform:translateX(-50%);} }
-  img { display:block; }
 
-  html { -webkit-text-size-adjust:100%; }
-  /* tablets and below */
-  @media (max-width: 900px) {
-    .work-masonry { columns:3 !important; }
-  }
-  @media (max-width: 768px) {
-    nav { padding:14px 18px !important; }
-    nav > div { gap:16px !important; }
-    nav a { font-size:12px !important; }
-    section, footer { padding-left:20px !important; padding-right:20px !important; }
-    .hero-content { padding:0 20px 26px !important; }
-    .svc-grid { grid-template-columns:1fr !important; }
-    #home { height:100svh !important; min-height:580px !important; }
-  }
-  /* phones */
-  @media (max-width: 700px) {
-    .work-masonry { columns:2 !important; }
-  }
-  @media (max-width: 380px) {
-    nav > div { gap:11px !important; }
-    .nav-cta { padding:9px 14px !important; }
-  }
-</style>
-</helmet>
+<!-- NAV -->
+<nav class="nav">
+  <a href="#home" aria-label="starpikx home"><img src="assets/img/logo.png" alt="starpikx"></a>
+  <div class="nav-links">
+    <a class="hide-xs" href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a class="hide-xs" href="#contact">Contact</a>
+    <a class="book" href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" rel="noopener">Book us</a>
+  </div>
+</nav>
 
-<div style="background:#0a0a0a; color:#fff; font-family:'Manrope',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
-
-  <!-- NAV -->
-  <nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; background:linear-gradient(180deg, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0) 100%); backdrop-filter:blur(6px);">
-    <a href="#home" style="display:flex; align-items:center;"><img src="assets/img/logo.png" alt="starpikx" style="height:20px;"></a>
-    <div style="display:flex; align-items:center; gap:34px;">
-      <a href="#services" style="color:rgba(255,255,255,0.75); text-decoration:none; font-size:13px; letter-spacing:0.04em; font-weight:500;" style-hover="color:#fff;">Services</a>
-      <a href="#work" style="color:rgba(255,255,255,0.75); text-decoration:none; font-size:13px; letter-spacing:0.04em; font-weight:500;" style-hover="color:#fff;">Work</a>
-      <a href="#contact" style="color:rgba(255,255,255,0.75); text-decoration:none; font-size:13px; letter-spacing:0.04em; font-weight:500;" style-hover="color:#fff;">Contact</a>
-      <a class="nav-cta" href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" style="color:#000; background:#fff; text-decoration:none; font-size:13px; letter-spacing:0.03em; font-weight:600; padding:11px 22px; border-radius:100px;" style-hover="background:rgba(255,255,255,0.85);">Book us</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="home" style="position:relative; height:100vh; min-height:660px; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden;">
-    <div style="position:absolute; inset:0; overflow:hidden;">
-      <img fetchpriority="high" src="assets/img/photo-01.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.82; animation:slowZoom 18s ease-out both;">
-    </div>
-    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.15) 32%, rgba(10,10,10,0.6) 70%, rgba(10,10,10,0.98) 100%);"></div>
-    <div class="hero-content" style="position:relative; z-index:2; padding:0 40px 30px; animation:fadeUp 0.9s ease both;">
-      <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
-        <span style="width:7px; height:7px; border-radius:50%; background:#fff;"></span>
-        <span style="font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.75); font-weight:600;">Est. Johannesburg · South Africa</span>
-      </div>
-      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(44px,7.2vw,104px); line-height:0.96; letter-spacing:-0.03em; max-width:15ch;">The event studio you can<span style="color:rgba(255,255,255,0.5);"> actually rely on.</span></h1>
-      <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:26px; margin-top:30px;">
-        <p style="font-size:clamp(15px,1.5vw,19px); line-height:1.5; color:rgba(255,255,255,0.78); max-width:46ch;">Full event photography and videography for conferences, masterclasses, corporate functions and brand activations. We deliver exactly what we say — exactly when we say it.</p>
-        <div style="display:flex; gap:14px;">
-          <a href="#work" style="color:#000; background:#fff; text-decoration:none; font-size:14px; font-weight:600; padding:15px 30px; border-radius:100px; white-space:nowrap;" style-hover="background:rgba(255,255,255,0.85);">See our work</a>
-          <a href="#services" style="color:#fff; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.3); text-decoration:none; font-size:14px; font-weight:600; padding:15px 30px; border-radius:100px; white-space:nowrap; backdrop-filter:blur(4px);" style-hover="background:rgba(255,255,255,0.2);">What we do</a>
-        </div>
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="hero-bg">
+    <img fetchpriority="high" src="assets/img/photo-01.jpg" alt="Two hosts mid-conversation on a masterclass set">
+  </div>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-in">
+    <span class="label">Johannesburg · South Africa</span>
+    <h1 class="display">The event studio you can <em>actually rely on.</em></h1>
+    <div class="hero-foot">
+      <p>Photography and video for conferences, galas, corporate functions, weddings and brand activations. We deliver exactly what we say — exactly when we say it.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#work">See our work</a>
+        <a class="btn btn-ghost" href="#services">What we do</a>
       </div>
     </div>
-    <!-- marquee -->
-    <div style="position:relative; z-index:2; margin-top:26px; overflow:hidden; -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);">
-      <div style="display:flex; gap:12px; width:max-content; padding:0 6px 30px; animation:marquee 34s linear infinite;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-02.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-03.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-04.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-05.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/new.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/new7.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/new1.jpeg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-09.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-02.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-03.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-04.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-05.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-06.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-07.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-08.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-        <img loading="lazy" decoding="async" src="assets/img/photo-09.jpg" style="height:110px; width:auto; border-radius:4px; object-fit:cover;">
-      </div>
+    <div class="hero-meta">
+      <span class="label">Events · Weddings · Portraits · Video</span>
+      <span class="label">starpikx productions</span>
     </div>
-  </section>
+  </div>
+</header>
 
-
-  <!-- SERVICES -->
-  <section id="services" style="padding:0 40px clamp(40px,6vw,80px);">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.1); padding-top:34px;">
-      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,4vw,52px); letter-spacing:-0.02em;">What we do</h2>
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.4); font-weight:600;">Services</span>
+<!-- STATEMENT -->
+<section class="wrap statement">
+  <span class="label">Approach</span>
+  <p class="big" style="margin-top:20px">A prepared crew, an unobtrusive day, and files in your hands on the date we agreed.</p>
+  <div class="principles">
+    <div class="principle">
+      <h4>Prepared before the day</h4>
+      <p>Run sheets, venue walk-throughs and a shot list agreed with you in advance.</p>
     </div>
-
-    <!-- 01 EVENTS -->
-    <div style="padding:clamp(44px,6vw,80px) 0; border-top:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:26px;">
-        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; color:rgba(255,255,255,0.4); font-weight:500;">01</span>
-        <span style="height:1px; width:40px; background:rgba(255,255,255,0.25);"></span>
-        <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.5); font-weight:600;">The core offer</span>
-      </div>
-      <div class="svc-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,60px); align-items:start;">
-        <div>
-          <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(34px,4.6vw,64px); letter-spacing:-0.02em; line-height:1;">Event Coverage</h3>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.65); margin-top:22px; max-width:50ch;">End-to-end photography for conferences, masterclasses, corporate functions, panels and brand activations. A structured, prepared crew — unobtrusive on the day, and delivered on the date we agreed.</p>
-          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;">
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Full-day coverage</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Half-day packages</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Masterclasses</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Interviews</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Multi-cam coverage</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Same-week priority editing</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.5); border:1px solid rgba(255,255,255,0.15); padding:8px 16px; border-radius:100px;">+ many more options</span>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:12px;">
-          <div style="aspect-ratio:1/1; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-03.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:1/1; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-10.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:1/1; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-06.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:1/1; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-09.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-        </div>
-      </div>
+    <div class="principle">
+      <h4>Invisible during it</h4>
+      <p>A crew that works the room without becoming part of the programme.</p>
     </div>
-
-    <!-- 02 PORTRAITS -->
-    <div style="padding:clamp(44px,6vw,80px) 0; border-top:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:26px;">
-        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; color:rgba(255,255,255,0.4); font-weight:500;">02</span>
-        <span style="height:1px; width:40px; background:rgba(255,255,255,0.25);"></span>
-        <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.5); font-weight:600;">Personal brands</span>
-      </div>
-      <div class="svc-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,60px); align-items:start;">
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="https://starpikx.com/assets/potraits.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-11.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-12.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-13.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-14.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="aspect-ratio:3/4; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-15.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-        </div>
-        <div>
-          <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(34px,4.6vw,64px); letter-spacing:-0.02em; line-height:1;">Portraits &amp; Creators</h3>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.65); margin-top:22px; max-width:48ch;">Studio and lifestyle portraits for professionals, founders and personal brands — plus content shoots for influencers, masterclasses, interviews and vlogs.</p>
-          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;">
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Studio &amp; lifestyle</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Personal branding</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Creator content</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">BTS videos included</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Full studio booking</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Outdoor portraits</span>
-          </div>
-        </div>
-      </div>
+    <div class="principle">
+      <h4>Delivered on time</h4>
+      <p>Same-week priority editing available, with the delivery date fixed up front.</p>
     </div>
+  </div>
+</section>
 
-    <!-- 03 VIDEO -->
-    <div style="padding:clamp(44px,6vw,80px) 0; border-top:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex; align-items:center; gap:16px; margin-bottom:26px;">
-        <span style="font-family:'Space Grotesk',sans-serif; font-size:15px; color:rgba(255,255,255,0.4); font-weight:500;">03</span>
-        <span style="height:1px; width:40px; background:rgba(255,255,255,0.25);"></span>
-        <span style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.5); font-weight:600;">Motion support</span>
-      </div>
-      <div class="svc-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,60px); align-items:start;">
-        <div>
-          <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(34px,4.6vw,64px); letter-spacing:-0.02em; line-height:1;">Video &amp; Interviews</h3>
-          <p style="font-size:16px; line-height:1.6; color:rgba(255,255,255,0.65); margin-top:22px; max-width:50ch;">Dependable video support for your event — gimbal-led coverage, clean interview setups and masterclass capture. The b-roll that turns a single event day into a month of content.</p>
-          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;">
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Gimbal operation</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Masterclass capture</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Interviews</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Event b-roll</span>
-            <span style="font-size:13px; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.2); padding:8px 16px; border-radius:100px;">Same-week video editing</span>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:12px;">
-          <div style="overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-16.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <div style="aspect-ratio:4/3; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-17.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-            <div style="aspect-ratio:4/3; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-18.jpg" alt="" style="width:100%; height:100%; object-fit:cover;"></div>
-          </div>
-        </div>
-      </div>
+<!-- SERVICES -->
+<section id="services" class="wrap">
+  <div class="svc-head">
+    <h2 class="display">What we do</h2>
+    <span class="label">Services</span>
+  </div>
+
+  <!-- 01 EVENTS + WEDDINGS -->
+  <div class="svc">
+    <div class="svc-text">
+      <div class="svc-num"><span>01</span><i></i><span class="label">The core offer</span></div>
+      <h3 class="display">Event Coverage</h3>
+      <p>Conferences, galas, awards evenings, masterclasses, panels, brand activations and weddings. One prepared crew, unobtrusive on the day, delivered on the date we agreed.</p>
+      <ul class="svc-list">
+        <li>Full-day coverage</li>
+        <li>Half-day packages</li>
+        <li>Conferences &amp; masterclasses</li>
+        <li>Awards &amp; gala dinners</li>
+        <li>Weddings — ceremony to last dance</li>
+        <li>Second shooter &amp; multi-cam</li>
+        <li>Same-week priority editing</li>
+      </ul>
     </div>
-  </section>
-
-  <!-- CINEMATIC BLEED -->
-  <section style="position:relative; height:min(78vh,720px); display:flex; align-items:center; justify-content:center; overflow:hidden; background:#000;">
-    <img loading="lazy" decoding="async" src="assets/img/photo-10.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.72; -webkit-mask-image:linear-gradient(180deg, transparent, #000 26%, #000 74%, transparent); mask-image:linear-gradient(180deg, transparent, #000 26%, #000 74%, transparent);">
-    <div style="position:relative; z-index:2; text-align:center; padding:0 40px;">
-      <span style="font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(255,255,255,0.6); font-weight:600;">On the day</span>
-      <p style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(34px,6vw,84px); letter-spacing:-0.03em; line-height:1; margin-top:20px; max-width:18ch;">We don't miss the moment.</p>
+    <div class="svc-media g2">
+      <div class="fig ar-169 span2"><img loading="lazy" decoding="async" src="assets/img/gala-panel-01.jpg" alt="Panel of guests seated on stage applauding at a corporate awards evening"></div>
+      <div class="fig ar-1"><img loading="lazy" decoding="async" src="assets/img/gala-awards-01.jpg" alt="Award recipient holding a certificate between two presenters on stage"></div>
+      <div class="fig ar-1"><img loading="lazy" decoding="async" src="assets/img/wed-05.jpg" alt="Bride and groom kissing at the altar in front of their guests"></div>
+      <div class="fig ar-1"><img loading="lazy" decoding="async" src="assets/img/wed-02.jpg" alt="Bride in a satin robe smiling while getting ready with her bridal party"></div>
+      <div class="fig ar-1"><img loading="lazy" decoding="async" src="assets/img/wed-01.jpg" alt="Groom having his bow tie adjusted before the ceremony"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- WORK -->
-  <section id="work" style="padding:clamp(70px,10vw,140px) 40px;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:20px; margin-bottom:44px;">
-      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(28px,4vw,52px); letter-spacing:-0.02em;">Selected work</h2>
-      <a href="https://starpikx-productions.pixieset.com/portfolio/" target="_blank" style="font-size:13px; letter-spacing:0.04em; color:rgba(255,255,255,0.7); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.3); padding-bottom:3px;" style-hover="color:#fff;">Full portfolio →</a>
+  <!-- 02 PORTRAITS -->
+  <div class="svc svc-flip">
+    <div class="svc-media g3">
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/photo-11.jpg" alt="Studio portrait of a woman in a red suit against a dark backdrop"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/portrait-sj-02.jpg" alt="Portrait of a man in a white polo shirt holding a soccer ball at dusk"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/photo-12.jpg" alt="Studio portrait of a woman in black on a light grey backdrop"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/portrait-sj-03.jpg" alt="Portrait of a man giving a double thumbs up against an evening sky"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/photo-13.jpg" alt="Studio portrait of a man in a white knit shirt on a light backdrop"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/portrait-sj-01.jpg" alt="Portrait of a man laughing on a phone call at a floodlit sports field"></div>
     </div>
-    <div class="work-masonry" style="columns:4; column-gap:14px;">
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-19.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-20.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-21.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-22.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-08.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-23.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-24.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-07.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-05.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-25.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-26.jpg" alt="" style="width:100%;"></div>
-      <div style="break-inside:avoid; margin-bottom:14px; overflow:hidden; border-radius:4px;"><img loading="lazy" decoding="async" src="assets/img/photo-27.jpg" alt="" style="width:100%;"></div>
+    <div class="svc-text">
+      <div class="svc-num"><span>02</span><i></i><span class="label">Personal brands</span></div>
+      <h3 class="display">Portraits &amp; Creators</h3>
+      <p>Studio and on-location portraits for professionals, founders and personal brands — plus content shoots for creators, masterclasses, interviews and vlogs.</p>
+      <ul class="svc-list">
+        <li>Studio &amp; lifestyle</li>
+        <li>Personal branding</li>
+        <li>On-location portraits</li>
+        <li>Creator content</li>
+        <li>Couples &amp; engagement</li>
+        <li>Full studio booking</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <!-- CONTACT -->
-  <section id="contact" style="position:relative; padding:clamp(80px,12vw,170px) 40px; text-align:center; overflow:hidden;">
-    <img loading="lazy" decoding="async" src="assets/img/photo-10.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.28;">
-    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,10,0.72), rgba(10,10,10,0.92));"></div>
-    <div style="position:relative; z-index:2;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.55); font-weight:600;">Let's work</span>
-      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(38px,7vw,90px); letter-spacing:-0.03em; line-height:1; margin:24px auto 0; max-width:16ch;">Have an event coming up?</h2>
-      <p style="font-size:17px; color:rgba(255,255,255,0.7); margin-top:24px; max-width:52ch; margin-left:auto; margin-right:auto;">Tell us the date and what you need. We'll send you availability and a package that fits — then handle the rest.</p>
-      <div style="display:flex; gap:14px; justify-content:center; margin-top:38px; flex-wrap:wrap;">
-        <a href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" style="color:#000; background:#fff; text-decoration:none; font-size:15px; font-weight:600; padding:17px 34px; border-radius:100px;" style-hover="background:rgba(255,255,255,0.85);">Book on WhatsApp</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUv8-cuLY0LQPEVRApOEcVfknybvK8B9JpWGvIYlWNxXhN0Q/viewform" target="_blank" style="color:#fff; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); text-decoration:none; font-size:15px; font-weight:600; padding:17px 34px; border-radius:100px;" style-hover="background:rgba(255,255,255,0.18);">Inquire about pricing</a>
-      </div>
-      <div style="display:flex; gap:28px; justify-content:center; margin-top:40px; flex-wrap:wrap;">
-        <a href="mailto:bookings@starpikx.com" style="color:rgba(255,255,255,0.8); text-decoration:none; font-size:14px;" style-hover="color:#fff;">bookings@starpikx.com</a>
-        <a href="https://wa.me/+27674682239" target="_blank" style="color:rgba(255,255,255,0.8); text-decoration:none; font-size:14px;" style-hover="color:#fff;">WhatsApp · +27 67 468 2239</a>
-        <a href="https://www.instagram.com/starpikx" target="_blank" style="color:rgba(255,255,255,0.8); text-decoration:none; font-size:14px;" style-hover="color:#fff;">@starpikx</a>
-      </div>
+  <!-- 03 VIDEO -->
+  <div class="svc">
+    <div class="svc-text">
+      <div class="svc-num"><span>03</span><i></i><span class="label">Motion support</span></div>
+      <h3 class="display">Video &amp; Interviews</h3>
+      <p>Dependable video support for your event — gimbal-led coverage, clean interview setups and masterclass capture. The b-roll that turns one event day into a month of content.</p>
+      <ul class="svc-list">
+        <li>Gimbal operation</li>
+        <li>Masterclass capture</li>
+        <li>Interviews</li>
+        <li>Event b-roll</li>
+        <li>Highlight reels</li>
+        <li>Same-week video editing</li>
+      </ul>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="padding:56px 40px 44px;">
-    <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:30px;">
-      <div>
-        <img loading="lazy" decoding="async" src="assets/img/logo.png" alt="starpikx" style="height:24px; margin-bottom:16px;">
-        <p style="font-size:14px; color:rgba(255,255,255,0.5); max-width:30ch; line-height:1.5;">Visual production for events, brands and people. Johannesburg, South Africa.</p>
-      </div>
-      <div style="display:flex; gap:22px; flex-wrap:wrap;">
-        <a href="https://www.instagram.com/starpikx" target="_blank" style="color:rgba(255,255,255,0.65); text-decoration:none; font-size:13px;" style-hover="color:#fff;">Instagram</a>
-        <a href="https://www.tiktok.com/@starpikx" target="_blank" style="color:rgba(255,255,255,0.65); text-decoration:none; font-size:13px;" style-hover="color:#fff;">TikTok</a>
-        <a href="https://youtube.com/@starpikx" target="_blank" style="color:rgba(255,255,255,0.65); text-decoration:none; font-size:13px;" style-hover="color:#fff;">YouTube</a>
-        <a href="https://wa.me/+27674682239" target="_blank" style="color:rgba(255,255,255,0.65); text-decoration:none; font-size:13px;" style-hover="color:#fff;">WhatsApp</a>
-      </div>
+    <div class="svc-media g2">
+      <div class="fig ar-169 span2"><img loading="lazy" decoding="async" src="assets/img/photo-09.jpg" alt="Three guests posing together on a broadcast media wall"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/photo-17.jpg" alt="Panellist answering a question with a handheld microphone"></div>
+      <div class="fig ar-34"><img loading="lazy" decoding="async" src="assets/img/gala-speaker-01.jpg" alt="Speaker reading from a lectern at a branded event"></div>
     </div>
-    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:44px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);">
-      <span style="font-size:12px; color:rgba(255,255,255,0.35);">© 2026 starpikx productions</span>
-      <span style="font-size:12px; color:rgba(255,255,255,0.35);">Concept preview</span>
+  </div>
+</section>
+
+<!-- BLEED -->
+<section class="bleed">
+  <img loading="lazy" decoding="async" src="assets/img/wed-08.jpg" alt="A couple dipping during their first dance in a cloud of low-lying fog">
+  <div class="bleed-in">
+    <span class="label">On the day</span>
+    <p class="display">We don't miss the moment.</p>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="wrap work-sec">
+  <div class="work-head">
+    <h2 class="display">Selected work</h2>
+    <a href="https://starpikx-productions.pixieset.com/portfolio/" target="_blank" rel="noopener">Full portfolio →</a>
+  </div>
+  <div class="work">
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/wed-04.jpg" alt="Bride in a beaded veil backlit by the setting sun"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/gala-hall-01.jpg" alt="A gala dinner hall lit in blue, set for a corporate awards evening"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-02.jpg" alt="Full-length portrait of a woman in a leopard-print suit on a studio set"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/wed-06.jpg" alt="Guests clinking champagne glasses under warm bokeh lights"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-15.jpg" alt="Couple in traditional blue attire walking beneath a willow tree"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/gala-room-01.jpg" alt="Guest raising a phone to film during a gala dinner"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/wed-07.jpg" alt="Newlyweds during their first dance under warm festoon lighting"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-21.jpg" alt="Street portrait of a man leaning against a concrete wall"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-19.jpg" alt="Two guests posing together on a red media wall"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/wed-03.jpg" alt="Bride walking toward the ceremony arch, seen past a camera operator"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-03.jpg" alt="Two guests holding a glass trophy at an awards ceremony"></div>
+    <div class="tile"><img loading="lazy" decoding="async" src="assets/img/photo-04.jpg" alt="Speaker seated on stage at a summit"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <img loading="lazy" decoding="async" src="assets/img/photo-25.jpg" alt="">
+  <div class="contact-veil"></div>
+  <div class="wrap contact-in">
+    <span class="label">Let's work</span>
+    <h2 class="display">Have an event coming up?</h2>
+    <p>Tell us the date and what you need. We'll send you availability and a package that fits — then handle the rest.</p>
+    <div class="actions">
+      <a class="btn btn-solid" href="https://wa.me/+27674682239?text=Hello%20starpikx" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSdUv8-cuLY0LQPEVRApOEcVfknybvK8B9JpWGvIYlWNxXhN0Q/viewform" target="_blank" rel="noopener">Inquire about pricing</a>
     </div>
-  </footer>
+    <div class="contact-rows">
+      <a class="crow" href="mailto:bookings@starpikx.com"><span>Email</span><span>bookings@starpikx.com</span></a>
+      <a class="crow" href="https://wa.me/+27674682239" target="_blank" rel="noopener"><span>WhatsApp</span><span>+27 67 468 2239</span></a>
+      <a class="crow" href="https://www.instagram.com/starpikx" target="_blank" rel="noopener"><span>Instagram</span><span>@starpikx</span></a>
+    </div>
+  </div>
+</section>
 
-</div>
-</x-dc>
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="foot-top">
+    <div>
+      <img loading="lazy" decoding="async" src="assets/img/logo.png" alt="starpikx">
+      <p>Visual production for events, brands and people. Johannesburg, South Africa.</p>
+    </div>
+    <div class="foot-links">
+      <a href="https://www.instagram.com/starpikx" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@starpikx" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://youtube.com/@starpikx" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://wa.me/+27674682239" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 starpikx productions</span>
+    <span>Concept preview</span>
+  </div>
+</footer>
 
-
-</body></html>
+</body>
+</html>
